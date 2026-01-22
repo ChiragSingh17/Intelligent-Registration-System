@@ -1,0 +1,15 @@
+node_modules/
+test-results/
+playwright-report/
+playwright/.cache/
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.mp4
+*.webm
+error-state.png
+success-state.png
+test-results.json
+.DS_Store
+.env

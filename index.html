@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligent Registration System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <h1>Registration Form</h1>
+            <p class="subtitle">Create your account to get started</p>
+            
+            <div id="error-alert" class="alert alert-error" style="display: none;">
+                <span class="alert-icon">❌</span>
+                <div class="alert-content">
+                    <strong>Error!</strong>
+                    <span id="error-message"></span>
+                </div>
+            </div>
+
+            <div id="success-alert" class="alert alert-success" style="display: none;">
+                <span class="alert-icon">✅</span>
+                <div class="alert-content">
+                    <strong>Registration Successful!</strong>
+                    <span>Your profile has been submitted successfully.</span>
+                </div>
+            </div>
+
+            <form id="registration-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" name="firstName" required>
+                        <span class="error-text" id="firstName-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" name="lastName" required>
+                        <span class="error-text" id="lastName-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">Email <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-text" id="email-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <span class="error-text" id="phone-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="1" max="120">
+                        <span class="error-text" id="age-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender <span class="required">*</span></label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="radio" name="gender" value="male" required>
+                                <span>Male</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="gender" value="female" required>
+                                <span>Female</span>
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="radio" name="gender" value="other" required>
+                                <span>Other</span>
+                            </label>
+                        </div>
+                        <span class="error-text" id="gender-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <textarea id="address" name="address" rows="3"></textarea>
+                    <span class="error-text" id="address-error"></span>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="country">Country <span class="required">*</span></label>
+                        <select id="country" name="country" required>
+                            <option value="">Select Country</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="canada">Canada</option>
+                            <option value="india">India</option>
+                            <option value="australia">Australia</option>
+                            <option value="germany">Germany</option>
+                            <option value="france">France</option>
+                        </select>
+                        <span class="error-text" id="country-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="state">State <span class="required">*</span></label>
+                        <select id="state" name="state" required disabled>
+                            <option value="">Select State</option>
+                        </select>
+                        <span class="error-text" id="state-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">City <span class="required">*</span></label>
+                        <select id="city" name="city" required disabled>
+                            <option value="">Select City</option>
+                        </select>
+                        <span class="error-text" id="city-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Password <span class="required">*</span></label>
+                        <input type="password" id="password" name="password" required>
+                        <div class="password-strength" id="password-strength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strength-fill"></div>
+                            </div>
+                            <span class="strength-text" id="strength-text">Password Strength</span>
+                        </div>
+                        <span class="error-text" id="password-error"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Confirm Password <span class="required">*</span></label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        <span class="error-text" id="confirmPassword-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span>I agree to the Terms & Conditions <span class="required">*</span></span>
+                    </label>
+                    <span class="error-text" id="terms-error"></span>
+                </div>
+
+                <button type="submit" id="submit-btn" class="submit-btn" disabled>Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "intelligent-registration-system",
+  "version": "1.0.0",
+  "description": "Intelligent Registration System with Automation Testing",
+  "main": "index.html",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:report": "playwright show-report"
+  },
+  "keywords": [
+    "registration",
+    "form",
+    "automation",
+    "testing",
+    "playwright"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "http-server": "^14.1.1"
+  }
+}
